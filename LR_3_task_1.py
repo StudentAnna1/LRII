@@ -45,6 +45,6 @@ output_model_file = 'model.pkl'
 with open(output_model_file, 'wb') as f:
  pickle.dump(regressor, f)
 # Завантаження моделі
-y_test_pred_new = regressor_model.predict(X_test)
+y_test_pred_new = regressor.predict(X_test)
 print("\nNew mean absolute error =", 
 round(sm.mean_absolute_error(y_test, y_test_pred_new), 2))
